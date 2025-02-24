@@ -28,12 +28,14 @@ int main(){
     cin >> input;
     start = Clock::now();
 
-    if (to_lower(input) == "quit"){
+    string lowered_input = to_lower(input);
+
+    if (lowered_input == "quit"){
         cout << "\nUser entered quit. Exiting program.\n\n";
         return 0;
     }
 
-    if (to_lower(input) != "start"){
+    if (lowered_input != "start"){
         cout << "Error: Invalid input. Please try again.\n\n";
         return 0;
     }
